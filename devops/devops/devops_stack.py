@@ -1,10 +1,10 @@
 from aws_cdk import (
     # Duration,
     Stack,
-    # aws_sqs as sqs,
     aws_s3 as s3,
     RemovalPolicy,
-    CfnOutput
+    CfnOutput,
+    aws_s3_deployment
 )
 from constructs import Construct
 
@@ -15,19 +15,21 @@ class DevopsStack(Stack):
 
         # The code that defines your stack goes here
 
+        s3_bucket_name = 'goodplace.cloud'
+
         # define an s3 bucket
         apples_bucket = s3.Bucket(self,
-                                  "apples",
+                                  s3_bucket_name,
+                                  bucket_name=s3_bucket_name,
                                   website_index_document="index.html",
                                   website_error_document="index.html",
                                   public_read_access=True,
-                                  block_public_access=s3.BlockPublicAccess.BLOCK_ACLS,
+                                  block_public_access=s3.BlockPublicAccess(block_public_acls=False, block_public_policy=False, ignore_public_acls=False, restrict_public_buckets=False),
                                   removal_policy=RemovalPolicy.DESTROY)
 
-        CfnOutput(self, "BucketURL", value=apples_bucket.bucket_website_url)
+        aws_s3_deployment.BucketDeployment(self, "Deploymment",
+                                           sources=[aws_s3_deployment.Source.asset('./build')],
+                                           destination_bucket=apples_bucket)
 
-        # example resource
-        # queue = sqs.Queue(
-        #     self, "DevopsQueue",
-        #     visibility_timeout=Duration.seconds(300),
-        # )
+        # log the public url for the bucket
+        CfnOutput(self, "BucketURL", value=apples_bucket.bucket_website_url)
