@@ -1,7 +1,7 @@
 """API Bootstrap"""
 
-from talking_service import TalkingService
+from .services import TalkingService
 
 talk = TalkingService()
 
-talk.start()
+talk.append("Some data to append")

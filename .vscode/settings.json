@@ -10,7 +10,36 @@
     "python.testing.unittestEnabled": true,
     "github.copilot.chat.commitMessageGeneration.instructions": [
         {
-            "text": "Write descriptive commit messages with a concise subject line and a short body that explains what changed and why. Mention key files or modules touched when helpful."
+            "text": "Be extremely detail with the file changes and the reason for the change",
         }
-    ]
+    ],
+    "files.exclude": {
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+    },
+    "search.exclude": {
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.analysis.indexing": true,
+    "python.analysis.exclude": [
+        "**/.venv/**",
+        "**/__pycache__/**",
+        "**/.pytest_cache/**"
+    ],
+    "python.analysis.ignore": [
+        "**/.venv/**",
+        "**/cdk.out/**"
+    ],
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/cdk.out/**": true,
+        "**/__pycache__/**": true,
+        "**/.pytest_cache/**": true
+    }
 }

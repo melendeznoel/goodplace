@@ -2,7 +2,7 @@ import json
 import uuid
 
 from flask import Flask, jsonify, request
-from talking_service import TalkingService
+from .services import TalkingService
 
 flask_api = Flask(__name__)
 talking_service = TalkingService()

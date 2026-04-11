@@ -3,7 +3,7 @@
 import unittest
 import os
 
-from src.talking_service import TalkingService
+from src.services.talking_service import TalkingService
 
 class TalkingServiceTestCase(unittest.TestCase):
     def test_append(self):
