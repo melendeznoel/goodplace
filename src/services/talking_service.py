@@ -3,7 +3,7 @@
 import sys
 import os
 from openai import OpenAI
-from models import ( Bundle, Identifier )
+from ..models import ( Bundle, Identifier )
 
 class TalkingService:
     """Class for talking to external platforms"""
