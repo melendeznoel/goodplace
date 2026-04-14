@@ -1,3 +1,4 @@
+"""This module contains the logic for generating answers to queries using the provided context chunks."""
 import ollama
 
 from .config import (LLM_MODEL)
@@ -21,7 +22,7 @@ Answer:
 
     response = ollama.chat(
         model=LLM_MODEL,
-        prompt=[{"role": "user", "content": prompt}]
+        messages=[{"role": "user", "content": prompt}]
     )
 
     return response["message"]["content"]
