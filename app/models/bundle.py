@@ -1,6 +1,6 @@
 import json
 
-from src.models.identifier import Identifier
+from app.models.identifier import Identifier
 
 class Bundle:
     def __init__(self) -> None:

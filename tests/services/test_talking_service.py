@@ -3,7 +3,7 @@
 import pytest
 import os
 
-from src.services import TalkingService
+from app.services import TalkingService
 
 class TestTalkingService:
     def test_append(self):

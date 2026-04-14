@@ -1,6 +1,6 @@
 import json
 
-from src.models.identifier import Identifier
+from app.models.identifier import Identifier
 
 class Observation:
     """https://www.hl7.org/fhir/observation.html"""

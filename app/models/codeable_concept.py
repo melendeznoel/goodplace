@@ -1,4 +1,4 @@
-from src.models.coding import Coding
+from app.models.coding import Coding
 
 
 class CodeableConcept:
