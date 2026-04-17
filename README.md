@@ -1,2 +1,30 @@
 # goodplace
-python service
+
+# RAG with Ollama
+
+## install uv
+
+irm https://astral.sh/uv/install.ps1 | iex
+
+uv --version
+
+## install python
+
+uv python install 3.13
+
+uv python pin 3.13
+
+## Setup
+ollama pull llama3
+ollama pull nomic-embed-text
+
+pip install -r requirements.txt
+
+## Run
+uv run python main.py
+
+uv run pytest
+
+uv run rag
+
+uv run ingest
