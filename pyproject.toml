@@ -40,3 +40,6 @@ dev = [
 [project.scripts]
 rag = "main:main"
 ingest = "scripts.ingest:main"
+
+[tool.uv]
+package = true
