@@ -1,1 +1,1 @@
-from .ingest import pipeline
+from .ingest import main as ingest_main
