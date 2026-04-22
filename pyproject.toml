@@ -38,12 +38,12 @@ dev = [
 ]
 
 [project.scripts]
-rag = "main:main"
-ingest = "scripts.ingest:main"
+#rag = "main:main"
+#ingest = "scripts.ingest:main"
 
-[tool.uv]
-package = true
+#[tool.uv]
+#package = true
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["app*"]
+#[tool.setuptools.packages.find]
+#where = ["."]
+#include = ["app*"]

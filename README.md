@@ -1,6 +1,4 @@
-# goodplace
-
-# RAG with Ollama
+# goodplace RAG with Ollama
 
 ## install uv
 
@@ -14,11 +12,11 @@ uv python install 3.13
 
 uv python pin 3.13
 
+uv sync
+
 ## Setup
 ollama pull llama3
 ollama pull nomic-embed-text
-
-pip install -r requirements.txt
 
 ## Run
 uv run python main.py
