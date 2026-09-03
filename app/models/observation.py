@@ -1,8 +1,9 @@
 import json
 
-from identifier import Identifier
+from app.models.identifier import Identifier
 
-class Bundle:
+class Observation:
+    """https://www.hl7.org/fhir/observation.html"""
     def __init__(self) -> None:
         self._identifier: list[Identifier] = []
 

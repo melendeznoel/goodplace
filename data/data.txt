@@ -1,0 +1,77 @@
+# Introduction to Cloud Computing
+
+Cloud computing is the delivery of computing services over the internet. These services include servers, storage, databases, networking, software, analytics, and intelligence. Instead of owning physical data centers or servers, organizations can rent access to technology from a cloud provider.
+
+The three main types of cloud computing services are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). IaaS provides virtualized computing resources over the internet. PaaS provides a platform allowing customers to develop, run, and manage applications. SaaS delivers software applications over the internet on a subscription basis.
+
+Major cloud providers include Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.
+
+# Benefits of Cloud Computing
+
+Cloud computing offers several benefits. One major benefit is scalability. Organizations can scale resources up or down depending on demand. Another benefit is cost efficiency, as users only pay for what they use.
+
+Reliability is also a key advantage. Cloud providers offer backup and disaster recovery solutions. Security is another important aspect, with providers offering tools such as encryption and identity management.
+
+# Introduction to Artificial Intelligence
+
+Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. These machines are programmed to think, learn, and solve problems.
+
+AI can be divided into narrow AI and general AI. Narrow AI is designed for specific tasks, such as image recognition or language translation. General AI refers to a system that can perform any intellectual task that a human can do, though it does not yet exist.
+
+Machine learning is a subset of AI that allows systems to learn from data and improve over time without being explicitly programmed.
+
+# Machine Learning Concepts
+
+Machine learning involves training models on data. There are three main types of machine learning: supervised learning, unsupervised learning, and reinforcement learning.
+
+Supervised learning uses labeled data to train models. Unsupervised learning finds patterns in unlabeled data. Reinforcement learning involves training an agent to make decisions by rewarding desired behaviors.
+
+Common algorithms include linear regression, decision trees, and neural networks.
+
+# What is Retrieval-Augmented Generation (RAG)?
+
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. Instead of relying only on a model's internal knowledge, RAG retrieves relevant documents and uses them as context for generating responses.
+
+A RAG system typically consists of a retriever and a generator. The retriever finds relevant documents using embeddings and similarity search. The generator uses a language model to produce answers based on the retrieved context.
+
+RAG improves accuracy, reduces hallucinations, and allows models to access up-to-date or domain-specific information.
+
+# Vector Embeddings
+
+Vector embeddings are numerical representations of text. They capture semantic meaning so that similar pieces of text have similar vector representations.
+
+Embeddings are used in similarity search. For example, a query can be converted into a vector and compared to stored document vectors using cosine similarity.
+
+Popular embedding models include transformer-based models and specialized embedding models.
+
+# Local LLMs with Ollama
+
+Ollama is a tool that allows users to run large language models locally on their machine. It simplifies downloading, running, and interacting with models.
+
+Users can pull models such as llama3 or mistral and interact with them via a CLI or API. Ollama also supports embedding models, making it useful for building RAG systems locally.
+
+Running models locally provides benefits such as privacy, reduced latency, and offline access.
+
+# Building a Simple RAG Pipeline
+
+To build a simple RAG pipeline, start by collecting documents and splitting them into chunks. Each chunk is converted into an embedding and stored in a vector database.
+
+When a user submits a query, the system converts the query into an embedding and retrieves the most relevant chunks. These chunks are then passed to a language model as context.
+
+The language model generates a response using both the query and the retrieved context.
+
+# Challenges in RAG Systems
+
+RAG systems face several challenges. One challenge is choosing the right chunk size. If chunks are too large, retrieval may be less precise. If they are too small, important context may be lost.
+
+Another challenge is embedding quality. Poor embeddings lead to poor retrieval results.
+
+Latency is also a concern, especially when retrieving from large datasets or using large models.
+
+# Future of RAG
+
+RAG is evolving with improvements in embedding models, hybrid search (combining keyword and vector search), and better retrieval strategies.
+
+Some systems are moving toward agent-based architectures where models can decide when and how to retrieve information.
+
+RAG remains a powerful approach for combining external knowledge with language models.

@@ -1,5 +1,5 @@
-from codeable_concept import CodeableConcept
-from identifier_use import IdentifierUse
+from app.models.codeable_concept import CodeableConcept
+from app.models.identifier_use import IdentifierUse
 
 class Identifier:
     def __init__(self, system, value) -> None:
